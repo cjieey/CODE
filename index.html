@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <style>
+    .completed { text-decoration: line-through; }
+    .high { color: red; }
+    .medium { color: orange; }
+    .low { color: green; }
+
+    button {
+      margin-left: 10px;
+      padding: 2px 10px; 
+      font-size: 10px;
+    }
+
+
+    input, select, button {
+      margin-bottom: 10px; 
+    }
+  </style>
+</head>
+<body>
+  <h1>Task Manager</h1>
+  <div>
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <select id="prioritySelect">
+      <option value="High">High</option>
+      <option value="Medium">Medium</option>
+      <option value="Low">Low</option>
+    </select>
+    <button onclick="addTask()">Add Task</button>
+  </div>
+  <div>
+    <input type="number" id="completionInput" placeholder="Enter task number to mark as completed">
+    <button onclick="markTaskCompleted()">Mark Completed</button>
+  </div>
+  <div id="taskList"></div>
+
+  <script src="function.js"></script>
+</body>
+</html>
